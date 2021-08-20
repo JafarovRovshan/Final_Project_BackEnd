@@ -17,6 +17,10 @@ namespace FlixGoWebUI.Controllers
         {
             return View();
         }
+        public IActionResult Contact()
+        {
+            return View();
+        }
     }
 
 }

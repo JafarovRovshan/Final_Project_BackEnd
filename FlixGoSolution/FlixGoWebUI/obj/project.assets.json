@@ -5996,23 +5996,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rovshan\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\ACER\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Final_Project FRONTEND\\FlixGo_Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\FlixGoWebUI.csproj",
+      "projectUniqueName": "C:\\Users\\ACER\\Source\\Repos\\FlixGo_Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\FlixGoWebUI.csproj",
       "projectName": "FlixGoWebUI",
-      "projectPath": "E:\\Final_Project FRONTEND\\FlixGo_Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\FlixGoWebUI.csproj",
-      "packagesPath": "C:\\Users\\Rovshan\\.nuget\\packages\\",
-      "outputPath": "E:\\Final_Project FRONTEND\\FlixGo_Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\obj\\",
+      "projectPath": "C:\\Users\\ACER\\Source\\Repos\\FlixGo_Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\FlixGoWebUI.csproj",
+      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ACER\\Source\\Repos\\FlixGo_Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Rovshan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -6062,7 +6064,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.206\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
