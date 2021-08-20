@@ -6,17 +6,11 @@ using System.Threading.Tasks;
 
 namespace FlixGoWebUI.Controllers
 {
-    public class HomeController : Controller
+    public class PricingController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Index2()
+        public IActionResult Pricing()
         {
             return View();
         }
     }
-
 }
