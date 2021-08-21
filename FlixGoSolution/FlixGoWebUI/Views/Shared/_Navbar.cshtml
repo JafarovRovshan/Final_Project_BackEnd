@@ -28,7 +28,7 @@
     </li>
 
     <li class="header__nav-item">
-        <a asp-controller="info" asp-action="help" class="header__nav-link">Help</a>
+        <a asp-controller="information" asp-action="help" class="header__nav-link">Help</a>
     </li>
 
     <!-- dropdown -->
@@ -38,12 +38,12 @@
            aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
 
         <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
-            <li><a asp-controller="info" asp-action="about">About</a></li>
+            <li><a asp-controller="information" asp-action="about">About</a></li>
             <li><a asp-controller="register" asp-action="profile">Profile</a></li>
             <li><a asp-controller="register" asp-action="signin">Sign In</a></li>
             <li><a asp-controller="register" asp-action="signup">Sign Up</a></li>
             <li><a asp-controller="register" asp-action="forgot">Forgot password</a></li>
-            <li><a asp-controller="info" asp-action="privacypolicy">Privacy Policy</a></li>
+            <li><a asp-controller="information" asp-action="privacypolicy">Privacy Policy</a></li>
             <li><a asp-controller="home" asp-action="contact">Contacts</a></li>
             @*<li><a asp-controller="home" asp-action="index">404 Page</a></li>*@
         </ul>

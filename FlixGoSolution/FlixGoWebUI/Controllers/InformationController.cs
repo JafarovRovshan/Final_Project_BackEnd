@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FlixGoWebUI.Controllers
 {
-    public class InfoController : Controller
+    public class InformationController : Controller
     {
         public IActionResult About()
         {

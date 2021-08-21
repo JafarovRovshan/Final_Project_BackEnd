@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6Af5Cfa/WWwxhjfIBFsrSgWx5v9l4IvQmtY3FkapQkXX/Nn28OQ95e8ytyyx3SW4LLy8CTRU4/QEVY9Gol3f2w==",
+  "dgSpecHash": "J+oyog+ck/Uvzh+Lv3KDfvAP8LoO/t+2LugP0YcOuH+SrE7MLUpfGhVlSAUYc16C1WgtcHGcplcqeOPyIwrgzA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ACER\\Source\\Repos\\FlixGo_Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\FlixGoWebUI.csproj",
+  "projectFilePath": "C:\\Users\\ACER\\source\\repos\\Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\FlixGoWebUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ACER\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\ACER\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

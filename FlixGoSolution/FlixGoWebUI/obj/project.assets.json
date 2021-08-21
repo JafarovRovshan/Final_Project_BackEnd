@@ -6003,11 +6003,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ACER\\Source\\Repos\\FlixGo_Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\FlixGoWebUI.csproj",
+      "projectUniqueName": "C:\\Users\\ACER\\source\\repos\\Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\FlixGoWebUI.csproj",
       "projectName": "FlixGoWebUI",
-      "projectPath": "C:\\Users\\ACER\\Source\\Repos\\FlixGo_Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\FlixGoWebUI.csproj",
+      "projectPath": "C:\\Users\\ACER\\source\\repos\\Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\FlixGoWebUI.csproj",
       "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ACER\\Source\\Repos\\FlixGo_Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\obj\\",
+      "outputPath": "C:\\Users\\ACER\\source\\repos\\Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
