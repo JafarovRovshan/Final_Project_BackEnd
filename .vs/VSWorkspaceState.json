@@ -2,10 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\FlixGoSolution",
-    "\\FlixGoSolution\\FlixGoWebUI",
     "\\FlixGoSolution\\FlixGoWebUI\\Views",
     "\\FlixGoSolution\\FlixGoWebUI\\Views\\Register"
   ],
-  "SelectedNode": "\\FlixGoSolution\\FlixGoWebUI\\Views\\Register\\Profile.cshtml",
+  "SelectedNode": "\\FlixGoSolution\\FlixGoSolution.sln",
   "PreviewInSolutionExplorer": false
 }
