@@ -44,6 +44,7 @@ namespace FlixGoWebUI
                 app.UseDeveloperExceptionPage();
             }
 
+            app.Seed();
             app.UseStaticFiles();
             app.UseRouting();
 

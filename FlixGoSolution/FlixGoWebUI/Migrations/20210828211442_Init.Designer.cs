@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FlixGoWebUI.Migrations
 {
     [DbContext(typeof(FlixGoDbContext))]
-    [Migration("20210828201934_Init")]
+    [Migration("20210828211442_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
