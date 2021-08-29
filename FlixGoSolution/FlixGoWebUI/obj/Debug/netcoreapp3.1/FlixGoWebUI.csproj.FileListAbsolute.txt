@@ -505,3 +505,4 @@ C:\Users\ACER\source\repos\Final_Project_BackEnd\FlixGoSolution\FlixGoWebUI\obj\
 C:\Users\ACER\source\repos\Final_Project_BackEnd\FlixGoSolution\FlixGoWebUI\obj\Debug\netcoreapp3.1\FlixGoWebUI.dll
 C:\Users\ACER\source\repos\Final_Project_BackEnd\FlixGoSolution\FlixGoWebUI\obj\Debug\netcoreapp3.1\FlixGoWebUI.pdb
 C:\Users\ACER\source\repos\Final_Project_BackEnd\FlixGoSolution\FlixGoWebUI\obj\Debug\netcoreapp3.1\FlixGoWebUI.genruntimeconfig.cache
+C:\Users\HP\Desktop\backup\Final_Project FRONTEND\Final_Project_BackEnd\FlixGoSolution\FlixGoWebUI\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
