@@ -1,9 +1,8 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace FlixGoWebUI.Migrations
 {
-    public partial class Init : Migration
+    public partial class ProductImages : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -68,7 +67,7 @@ namespace FlixGoWebUI.Migrations
                     Name = table.Column<string>(nullable: true),
                     CategoryId = table.Column<int>(nullable: false),
                     GenreId = table.Column<int>(nullable: false),
-                    ReleaseDate = table.Column<DateTime>(nullable: false),
+                    ReleaseDate = table.Column<int>(nullable: false),
                     Duration = table.Column<int>(nullable: false),
                     CountryId = table.Column<int>(nullable: false),
                     ProductImageId = table.Column<int>(nullable: false),

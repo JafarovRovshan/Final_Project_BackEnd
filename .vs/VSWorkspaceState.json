@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\FlixGoSolution",
-    "\\FlixGoSolution\\FlixGoWebUI\\Views",
-    "\\FlixGoSolution\\FlixGoWebUI\\Views\\Register"
+    "\\FlixGoSolution\\FlixGoWebUI",
+    "\\FlixGoSolution\\FlixGoWebUI\\Models",
+    "\\FlixGoSolution\\FlixGoWebUI\\Models\\DataContext"
   ],
-  "SelectedNode": "\\FlixGoSolution\\FlixGoSolution.sln",
+  "SelectedNode": "\\FlixGoSolution\\FlixGoWebUI\\Models\\DataContext\\FlixGoDbSeed.cs",
   "PreviewInSolutionExplorer": false
 }

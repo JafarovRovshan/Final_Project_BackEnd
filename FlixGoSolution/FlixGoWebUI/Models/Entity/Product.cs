@@ -13,7 +13,7 @@ namespace FlixGoWebUI.Models.Entity
         public Category Category { get; set; }
         public int GenreId { get; set; }
         public  Genre  Genre { get; set; }
-        public DateTime ReleaseDate { get; set; }
+        public int ReleaseDate { get; set; }
         public int Duration { get; set; }
         public int CountryId { get; set; }
         public  Country Country { get; set; }

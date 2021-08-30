@@ -1,20 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Desktop\\backup\\Final_Project FRONTEND\\Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\FlixGoWebUI.csproj": {}
+    "C:\\Users\\ACER\\source\\repos\\Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\FlixGoWebUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Desktop\\backup\\Final_Project FRONTEND\\Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\FlixGoWebUI.csproj": {
+    "C:\\Users\\ACER\\source\\repos\\Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\FlixGoWebUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\backup\\Final_Project FRONTEND\\Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\FlixGoWebUI.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\source\\repos\\Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\FlixGoWebUI.csproj",
         "projectName": "FlixGoWebUI",
-        "projectPath": "C:\\Users\\HP\\Desktop\\backup\\Final_Project FRONTEND\\Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\FlixGoWebUI.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\backup\\Final_Project FRONTEND\\Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\obj\\",
+        "projectPath": "C:\\Users\\ACER\\source\\repos\\Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\FlixGoWebUI.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ACER\\source\\repos\\Final_Project_BackEnd\\FlixGoSolution\\FlixGoWebUI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
