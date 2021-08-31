@@ -1,0 +1,53 @@
+﻿                            <!-- header nav -->
+<ul class="header__nav">
+    <!-- dropdown -->
+    <li class="header__nav-item">
+        <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+
+        <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuHome">
+            <li><a asp-controller="home" asp-action="index">Home slideshow bg</a></li>
+            <li><a asp-controller="home" asp-action="index2">Home static bg</a></li>
+        </ul>
+    </li>
+    <!-- end dropdown -->
+    <!-- dropdown -->
+    <li class="header__nav-item">
+        <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalog</a>
+
+        <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
+            <li><a asp-controller="catalog" asp-action="grid">Catalog Grid</a></li>
+            <li><a asp-controller="catalog" asp-action="list">Catalog List</a></li>
+            <li><a asp-controller="catalog" asp-action="movie">Details Movie</a></li>
+            <li><a asp-controller="catalog" asp-action="tv">Details TV Series</a></li>
+        </ul>
+    </li>
+    <!-- end dropdown -->
+
+    <li class="header__nav-item">
+        <a asp-controller="pricing" asp-action="pricing" class="header__nav-link">Pricing Plan</a>
+    </li>
+
+    <li class="header__nav-item">
+        <a asp-controller="information" asp-action="help" class="header__nav-link">Help</a>
+    </li>
+
+    <!-- dropdown -->
+    <li class="dropdown header__nav-item">
+        <a class="dropdown-toggle header__nav-link header__nav-link--more" href="#"
+           role="button" id="dropdownMenuMore" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
+
+        <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
+            <li><a asp-controller="information" asp-action="about">About</a></li>
+            <li><a asp-controller="register" asp-action="profile">Profile</a></li>
+            <li><a asp-controller="register" asp-action="signin">Sign In</a></li>
+            <li><a asp-controller="register" asp-action="signup">Sign Up</a></li>
+            <li><a asp-controller="register" asp-action="forgot">Forgot password</a></li>
+            <li><a asp-controller="information" asp-action="privacypolicy">Privacy Policy</a></li>
+            <li><a asp-controller="home" asp-action="contact">Contacts</a></li>
+            @*<li><a asp-controller="home" asp-action="index">404 Page</a></li>*@
+        </ul>
+    </li>
+    <!-- end dropdown -->
+</ul>
+<!-- end header nav -->
