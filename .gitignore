@@ -1,3 +1,6 @@
-Migrations/
 bin/
 obj/
+
+FlixGoSolution/FlixGoWebUI/Migrations/
+FlixGoSolution/FlixGoWebUI/obj/Debug/netcoreapp3.1/FlixGoWebUI.assets.cache
+FlixGoSolution/FlixGoWebUI/Migrations/*.cs
