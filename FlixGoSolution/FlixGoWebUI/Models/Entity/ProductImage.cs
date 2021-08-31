@@ -10,5 +10,7 @@ namespace FlixGoWebUI.Models.Entity
         public int Id { get; set; }
         public string ImagePath { get; set; }
 
+        public bool IsMain { get; set; }
+
     }
 }
