@@ -1,5 +1,4 @@
-﻿@model IEnumerable<Category> 
-
+﻿@model HomeViewModel
 @{
     ViewData["Title"] = "Index";
 }
@@ -36,90 +35,95 @@
 
             <div class="col-12">
                 <div class="owl-carousel home__carousel">
-                    <div class="item">
-                        <!-- card -->
-                        <div class="card card--big">
-                            <div class="card__cover">
-                                <img src="~/uploads/img/covers/cover.jpg" alt="" />
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title">
-                                    <a href="#">I Dream in Another Language</a>
-                                </h3>
-                                <span class="card__category">
-                                    <a href="#">Action</a>
-                                    <a href="#">Triler</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
 
-                    <div class="item">
-                        <!-- card -->
-                        <div class="card card--big">
-                            <div class="card__cover">
-                                <img src="~/uploads/img/covers/cover2.jpg" alt="" />
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Benched</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Comedy</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
+                    @foreach (var item in Model.Products)
+                    {
+                        <!--card-->
+                        <div class="item">
+                            <div class="card card--big">
+                                <div class="card__cover">
+                                    <img src="~/uploads/img/covers/@item.ImagePath" alt="" />
+                                    <a href="#" class="card__play">
+                                        <i class="icon ion-ios-play"></i>
+                                    </a>
+                                </div>
+                                <div class="card__content">
+                                    <h3 class="card__title">
+                                        <a href="#">@item.Name</a>
+                                    </h3>
+                                    <span class="card__category">
+                                        <a href="#">@item.Genre.Name</a>
+                                        <a href="#">@item.Genre.Name</a>
+                                    </span>
+                                    <span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+                                </div>
                             </div>
                         </div>
-                        <!-- end card -->
-                    </div>
+                        <!--end card-->
+                    }
 
-                    <div class="item">
-                        <!-- card -->
-                        <div class="card card--big">
-                            <div class="card__cover">
-                                <img src="~/uploads/img/covers/cover3.jpg" alt="" />
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Whitney</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Romance</a>
-                                    <a href="#">Drama</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
 
-                    <div class="item">
-                        <!-- card -->
-                        <div class="card card--big">
-                            <div class="card__cover">
-                                <img src="~/uploads/img/covers/cover4.jpg" alt="" />
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Blindspotting</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Comedy</a>
-                                    <a href="#">Drama</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
-                            </div>
+                    <!--<div class="item">-->
+                    <!-- card -->
+                    <!--<div class="card card--big">
+                        <div class="card__cover">
+                            <img src="~/uploads/img/covers/cover2.jpg" alt="" />
+                            <a href="#" class="card__play">
+                                <i class="icon ion-ios-play"></i>
+                            </a>
                         </div>
-                        <!-- end card -->
-                    </div>
+                        <div class="card__content">
+                            <h3 class="card__title"><a href="#">Benched</a></h3>
+                            <span class="card__category">
+                                <a href="#">Comedy</a>
+                            </span>
+                            <span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
+                        </div>
+                    </div>-->
+                    <!-- end card -->
+                    <!--</div>
+
+                    <div class="item">-->
+                    <!-- card -->
+                    <!--<div class="card card--big">
+                        <div class="card__cover">
+                            <img src="~/uploads/img/covers/cover3.jpg" alt="" />
+                            <a href="#" class="card__play">
+                                <i class="icon ion-ios-play"></i>
+                            </a>
+                        </div>
+                        <div class="card__content">
+                            <h3 class="card__title"><a href="#">Whitney</a></h3>
+                            <span class="card__category">
+                                <a href="#">Romance</a>
+                                <a href="#">Drama</a>
+                            </span>
+                            <span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
+                        </div>
+                    </div>-->
+                    <!-- end card -->
+                    <!--</div>
+
+                    <div class="item">-->
+                    <!-- card -->
+                    <!--<div class="card card--big">
+                        <div class="card__cover">
+                            <img src="~/uploads/img/covers/cover4.jpg" alt="" />
+                            <a href="#" class="card__play">
+                                <i class="icon ion-ios-play"></i>
+                            </a>
+                        </div>
+                        <div class="card__content">
+                            <h3 class="card__title"><a href="#">Blindspotting</a></h3>
+                            <span class="card__category">
+                                <a href="#">Comedy</a>
+                                <a href="#">Drama</a>
+                            </span>
+                            <span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
+                        </div>
+                    </div>-->
+                    <!-- end card -->
+                    <!--</div>-->
                 </div>
             </div>
         </div>
@@ -140,7 +144,7 @@
                         id="content__tabs"
                         role="tablist">
 
-                        @foreach (var item in Model)
+                        @foreach (var item in Model.Categories)
                         {
                             <li class="nav-item">
                                 <a class="nav-link active"
@@ -154,31 +158,31 @@
 
 
                         @*<li class="nav-item">
-                            <a class="nav-link"
-                               data-toggle="tab"
-                               href="#tab-2"
-                               role="tab"
-                               aria-controls="tab-2"
-                               aria-selected="false">MOVIES</a>
-                        </li>
+                                <a class="nav-link"
+                                   data-toggle="tab"
+                                   href="#tab-2"
+                                   role="tab"
+                                   aria-controls="tab-2"
+                                   aria-selected="false">MOVIES</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               data-toggle="tab"
-                               href="#tab-3"
-                               role="tab"
-                               aria-controls="tab-3"
-                               aria-selected="false">TV SERIES</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   data-toggle="tab"
+                                   href="#tab-3"
+                                   role="tab"
+                                   aria-controls="tab-3"
+                                   aria-selected="false">TV SERIES</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               data-toggle="tab"
-                               href="#tab-4"
-                               role="tab"
-                               aria-controls="tab-4"
-                               aria-selected="false">CARTOONS</a>
-                        </li>*@
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   data-toggle="tab"
+                                   href="#tab-4"
+                                   role="tab"
+                                   aria-controls="tab-4"
+                                   aria-selected="false">CARTOONS</a>
+                            </li>*@
                     </ul>
                     <!-- end content tabs nav -->
                     <!-- content mobile tabs nav -->
@@ -253,56 +257,53 @@
                  aria-labelledby="1-tab">
                 <div class="row">
                     <!-- card -->
-                    <div class="col-6 col-sm-12 col-lg-6">
-                        <div class="card card--list">
-                            <div class="row">
-                                <div class="col-12 col-sm-4">
-                                    <div class="card__cover">
-                                        <img src="~/uploads/img/covers/cover.jpg" alt="" />
-                                        <a href="#" class="card__play">
-                                            <i class="icon ion-ios-play"></i>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-sm-8">
-                                    <div class="card__content">
-                                        <h3 class="card__title">
-                                            <a href="#">I Dream in Another Language</a>
-                                        </h3>
-                                        <span class="card__category">
-                                            <a href="#">Action</a>
-                                            <a href="#">Triler</a>
-                                        </span>
-
-                                        <div class="card__wrap">
-                                            <span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
-
-                                            <ul class="card__list">
-                                                <li>HD</li>
-                                                <li>16+</li>
-                                            </ul>
+                    @foreach (var item in Model.Products)
+                    {
+                        <div class="col-6 col-sm-12 col-lg-6">
+                            <div class="card card--list">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4">
+                                        <div class="card__cover">
+                                            <img src="~/uploads/img/covers/@item.ImagePath" alt="" />
+                                            <a href="#" class="card__play">
+                                                <i class="icon ion-ios-play"></i>
+                                            </a>
                                         </div>
+                                    </div>
 
-                                        <div class="card__description">
-                                            <p>
-                                                It is a long established fact that a reader will be
-                                                distracted by the readable content of a page when
-                                                looking at its layout. The point of using Lorem
-                                                Ipsum is that it has a more-or-less normal
-                                                distribution of letters, as opposed to using
-                                                'Content here, content here', making it look like
-                                                readable English.
-                                            </p>
+                                    <div class="col-12 col-sm-8">
+                                        <div class="card__content">
+                                            <h3 class="card__title">
+                                                <a href="#">@item.Name</a>
+                                            </h3>
+                                            <span class="card__category">
+                                                <a href="#">@item.Genre.Name</a>
+                                                <a href="#">@item.Genre.Name</a>
+                                            </span>
+
+                                            <div class="card__wrap">
+                                                <span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+
+                                                <ul class="card__list">
+                                                    <li>HD</li>
+                                                    <li>16+</li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="card__description">
+                                                <p>
+                                                    @item.Description
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    }
                     <!-- end card -->
                     <!-- card -->
-                    <div class="col-6 col-sm-12 col-lg-6">
+                    <!--<div class="col-6 col-sm-12 col-lg-6">
                         <div class="card card--list">
                             <div class="row">
                                 <div class="col-12 col-sm-4">
@@ -343,10 +344,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     <!-- end card -->
                     <!-- card -->
-                    <div class="col-6 col-sm-12 col-lg-6">
+                    <!--<div class="col-6 col-sm-12 col-lg-6">
                         <div class="card card--list">
                             <div class="row">
                                 <div class="col-12 col-sm-4">
@@ -391,10 +392,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     <!-- end card -->
                     <!-- card -->
-                    <div class="col-6 col-sm-12 col-lg-6">
+                    <!--<div class="col-6 col-sm-12 col-lg-6">
                         <div class="card card--list">
                             <div class="row">
                                 <div class="col-12 col-sm-4">
@@ -440,10 +441,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     <!-- end card -->
                     <!-- card -->
-                    <div class="col-6 col-sm-12 col-lg-6">
+                    <!--<div class="col-6 col-sm-12 col-lg-6">
                         <div class="card card--list">
                             <div class="row">
                                 <div class="col-12 col-sm-4">
@@ -489,10 +490,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     <!-- end card -->
                     <!-- card -->
-                    <div class="col-6 col-sm-12 col-lg-6">
+                    <!--<div class="col-6 col-sm-12 col-lg-6">
                         <div class="card card--list">
                             <div class="row">
                                 <div class="col-12 col-sm-4">
@@ -537,7 +538,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     <!-- end card -->
                 </div>
             </div>
@@ -1319,127 +1320,29 @@
             </div>
             <!-- end section title -->
             <!-- card -->
-            <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                <div class="card">
-                    <div class="card__cover">
-                        <img src="~/uploads/img/covers/cover.jpg" alt="" />
-                        <a href="#" class="card__play">
-                            <i class="icon ion-ios-play"></i>
-                        </a>
-                    </div>
-                    <div class="card__content">
-                        <h3 class="card__title">
-                            <a href="#">I Dream in Another Language</a>
-                        </h3>
-                        <span class="card__category">
-                            <a href="#">Action</a>
-                            <a href="#">Triler</a>
-                        </span>
-                        <span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
-                    </div>
-                </div>
-            </div>
-            <!-- end card -->
-            <!-- card -->
-            <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                <div class="card">
-                    <div class="card__cover">
-                        <img src="~/uploads/img/covers/cover3.jpg" alt="" />
-                        <a href="#" class="card__play">
-                            <i class="icon ion-ios-play"></i>
-                        </a>
-                    </div>
-                    <div class="card__content">
-                        <h3 class="card__title"><a href="#">Benched</a></h3>
-                        <span class="card__category">
-                            <a href="#">Comedy</a>
-                        </span>
-                        <span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
+            @foreach (var item in Model.Products)
+            {
+                <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+                    <div class="card">
+                        <div class="card__cover">
+                            <img src="~/uploads/img/covers/@item.ImagePath" alt="" />
+                            <a href="#" class="card__play">
+                                <i class="icon ion-ios-play"></i>
+                            </a>
+                        </div>
+                        <div class="card__content">
+                            <h3 class="card__title">
+                                <a href="#">@item.Name</a>
+                            </h3>
+                            <span class="card__category">
+                                <a href="#">@item.Genre.Name</a>
+                                <a href="#">@item.Genre.Name</a>
+                            </span>
+                            <span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- end card -->
-            <!-- card -->
-            <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                <div class="card">
-                    <div class="card__cover">
-                        <img src="~/uploads/img/covers/cover2.jpg" alt="" />
-                        <a href="#" class="card__play">
-                            <i class="icon ion-ios-play"></i>
-                        </a>
-                    </div>
-                    <div class="card__content">
-                        <h3 class="card__title"><a href="#">Whitney</a></h3>
-                        <span class="card__category">
-                            <a href="#">Romance</a>
-                            <a href="#">Drama</a>
-                            <a href="#">Music</a>
-                        </span>
-                        <span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
-                    </div>
-                </div>
-            </div>
-            <!-- end card -->
-            <!-- card -->
-            <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                <div class="card">
-                    <div class="card__cover">
-                        <img src="~/uploads/img/covers/cover6.jpg" alt="" />
-                        <a href="#" class="card__play">
-                            <i class="icon ion-ios-play"></i>
-                        </a>
-                    </div>
-                    <div class="card__content">
-                        <h3 class="card__title"><a href="#">Blindspotting</a></h3>
-                        <span class="card__category">
-                            <a href="#">Comedy</a>
-                            <a href="#">Drama</a>
-                        </span>
-                        <span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
-                    </div>
-                </div>
-            </div>
-            <!-- end card -->
-            <!-- card -->
-            <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                <div class="card">
-                    <div class="card__cover">
-                        <img src="~/uploads/img/covers/cover4.jpg" alt="" />
-                        <a href="#" class="card__play">
-                            <i class="icon ion-ios-play"></i>
-                        </a>
-                    </div>
-                    <div class="card__content">
-                        <h3 class="card__title">
-                            <a href="#">I Dream in Another Language</a>
-                        </h3>
-                        <span class="card__category">
-                            <a href="#">Action</a>
-                            <a href="#">Triler</a>
-                        </span>
-                        <span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
-                    </div>
-                </div>
-            </div>
-            <!-- end card -->
-            <!-- card -->
-            <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                <div class="card">
-                    <div class="card__cover">
-                        <img src="~/uploads/img/covers/cover5.jpg" alt="" />
-                        <a href="#" class="card__play">
-                            <i class="icon ion-ios-play"></i>
-                        </a>
-                    </div>
-                    <div class="card__content">
-                        <h3 class="card__title"><a href="#">Benched</a></h3>
-                        <span class="card__category">
-                            <a href="#">Comedy</a>
-                        </span>
-                        <span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
-                    </div>
-                </div>
-            </div>
+            }
             <!-- end card -->
             <!-- section btn -->
             <div class="col-12">

@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace FlixGoWebUI.Models.Entity
 {
-    public class Product
+    public class Product: BaseEntity
     {
-        public int Id { get; set; }
+
         public string Name { get; set; }
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
@@ -18,7 +18,8 @@ namespace FlixGoWebUI.Models.Entity
         public int CountryId { get; set; }
         public virtual Country Country { get; set; }
         public int ProductImageId { get; set; }
-        public virtual ProductImage ProductImage { get; set; }
+
+        public string ImagePath { get; set; }
         public string Description { get; set; }
     }
 }

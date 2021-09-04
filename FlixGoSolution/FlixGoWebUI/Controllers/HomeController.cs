@@ -1,9 +1,8 @@
 ﻿using FlixGoWebUI.Models.DataContext;
+using FlixGoWebUI.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace FlixGoWebUI.Controllers
 {
@@ -16,8 +15,24 @@ namespace FlixGoWebUI.Controllers
         }
         public IActionResult Index()
         {
-            var categories = db.Categories.ToList();
-            return View(categories);
+            FlixGoDbContext db = new FlixGoDbContext();
+            HomeViewModel vm = new HomeViewModel();
+
+            vm.Categories = db.Categories
+                //.Where(c => c.DeletedByUserId == null)
+                .ToList();
+
+            vm.Products = db.Products
+                //.Where(p => p.DeletedByUserId == null)
+                //.Include(p => p.ImagePath)
+                .Include(p => p.Genre)
+                .ToList();
+
+
+            return View(vm);
+
+
+
         }
 
         public IActionResult Index2()

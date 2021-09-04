@@ -5,12 +5,9 @@ using System.Threading.Tasks;
 
 namespace FlixGoWebUI.Models.Entity
 {
-    public class ProductImage
+    public class ProductImage: BaseEntity
     {
-        public int Id { get; set; }
         public string ImagePath { get; set; }
-
-        public bool IsMain { get; set; }
 
     }
 }

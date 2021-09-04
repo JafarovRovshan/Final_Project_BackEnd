@@ -2,28 +2,25 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace FlixGoWebUI.Models.DataContext
 {
     public static class FlixGoDbSeed
     {
-        public static IApplicationBuilder Seed(this IApplicationBuilder app) 
+        public static IApplicationBuilder Seed(this IApplicationBuilder app)
         {
-            using(var scope = app.ApplicationServices.CreateScope())
+            using (var scope = app.ApplicationServices.CreateScope())
             {
                 var db = scope.ServiceProvider.GetRequiredService<FlixGoDbContext>();
-               
+
                 db.Database.Migrate();
 
                 InitCategory(db);
                 InitCountry(db);
-                 InitGenre(db);
+                InitGenre(db);
                 InitProductImage(db);
-                 InitProduct(db);
+                InitProduct(db);
             }
 
             return app;
@@ -34,24 +31,13 @@ namespace FlixGoWebUI.Models.DataContext
 
             if (!db.Products.Any())
             {
-                //ProductImage productImage = new ProductImage
-                //{
-                //    Id = 1,
-                //    ImagePath = "cover.jpg"
-                //};
-                //ProductImage productImage2 = new ProductImage
-                //{
-                //    Id = 2,
-                //    ImagePath = "cover2.jpg"
-                //};
 
                 var category = db.Categories.FirstOrDefault();
                 var genre = db.Genres.FirstOrDefault();
                 var country = db.Countries.FirstOrDefault();
                 if (category != null && genre != null)
                 {
-                    //hazirdi, bashqa yoxdu error? birde migration problem yaradir git ile push edib goturende
-                    //he aydindi 2 deq
+
                     Product product = new Product
                     {
                         Name = "I Dream in Another Language",
@@ -75,12 +61,20 @@ namespace FlixGoWebUI.Models.DataContext
                         Category = category,
                         ProductImageId = 2
                     };
-
-                    //db.ProductImages.Add(productImage);
-                    //db.ProductImages.Add(productImage2);
+                    Product product3 = new Product
+                    {
+                        Name = "Jack",
+                        Genre = genre,
+                        Country = country,
+                        Description = "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on",
+                        Duration = 120,
+                        ReleaseDate = 2022,
+                        Category = category,
+                        ProductImageId = 3
+                    };
                     db.Products.Add(product);
                     db.Products.Add(product2);
-
+                    db.Products.Add(product3);
 
                     db.SaveChanges();
                 }
@@ -93,7 +87,6 @@ namespace FlixGoWebUI.Models.DataContext
             {
                 db.ProductImages.Add(new ProductImage
                 {
-                    //Id = 1,   identity columndu-deye ehtiyyac yoxdu
                     ImagePath = "cover.jpg"
                 });
                 db.ProductImages.Add(new ProductImage
@@ -166,7 +159,7 @@ namespace FlixGoWebUI.Models.DataContext
                 });
 
 
-                db.SaveChanges();//yoxlayim birde
+                db.SaveChanges();
             }
         }
 
