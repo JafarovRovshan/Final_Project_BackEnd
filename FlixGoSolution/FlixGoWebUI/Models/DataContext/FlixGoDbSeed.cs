@@ -40,14 +40,15 @@ namespace FlixGoWebUI.Models.DataContext
 
                     Product product = new Product
                     {
-                        Name = "I Dream in Another Language",
+                        Name = "Joker",
                         Genre = genre,
                         Country = country,
-                        Description = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                        Duration = 120,
-                        ReleaseDate = 2017,
+                        Description = "Set in 1981, it follows Arthur Fleck, a failed clown and stand-up comedian whose descent into insanity and nihilism inspires a violent counter-cultural revolution against the wealthy in a decaying Gotham City.",
+                        Duration = 122,
+                        ReleaseDate = 2019,
                         Category = category,
-                        ProductImageId = 1
+                        ProductImageId = 1,
+                        ImagePath = "cover5.jpg"
                     };
 
                     Product product2 = new Product
@@ -55,26 +56,16 @@ namespace FlixGoWebUI.Models.DataContext
                         Name = "Lucy",
                         Genre = genre,
                         Country = country,
-                        Description = "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on",
+                        Description = "Lucy is a smart, college student who finds herself in a horrific drug and human trafficking situation where her brain is permanently altered by an illegal new drug that gets accidentally ingested during her captivity.",
                         Duration = 90,
-                        ReleaseDate = 2018,
+                        ReleaseDate = 2014,
                         Category = category,
-                        ProductImageId = 2
+                        ProductImageId = 2,
+                        ImagePath = "cover7.jpg"
                     };
-                    Product product3 = new Product
-                    {
-                        Name = "Jack",
-                        Genre = genre,
-                        Country = country,
-                        Description = "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on",
-                        Duration = 120,
-                        ReleaseDate = 2022,
-                        Category = category,
-                        ProductImageId = 3
-                    };
+
                     db.Products.Add(product);
                     db.Products.Add(product2);
-                    db.Products.Add(product3);
 
                     db.SaveChanges();
                 }
