@@ -7,5 +7,6 @@ namespace FlixGoWebUI.Models.ViewModels
     {
         public List<Category> Categories { get; set; }
         public List<Product> Products { get; set; }
+        public List<Genre> Genres { get; set; }
     }
 }

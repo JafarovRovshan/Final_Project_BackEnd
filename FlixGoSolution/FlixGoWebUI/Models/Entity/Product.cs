@@ -17,8 +17,6 @@ namespace FlixGoWebUI.Models.Entity
         public int Duration { get; set; }
         public int CountryId { get; set; }
         public virtual Country Country { get; set; }
-        public int ProductImageId { get; set; }
-
         public string ImagePath { get; set; }
         public string Description { get; set; }
     }
