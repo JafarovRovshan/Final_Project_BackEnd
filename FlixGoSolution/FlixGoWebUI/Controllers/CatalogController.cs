@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FlixGoWebUI.Models.DataContext;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,15 +10,26 @@ namespace FlixGoWebUI.Controllers
 {
     public class CatalogController : Controller
     {
+        readonly FlixGoDbContext db;
+        readonly FlixGoDbContext _context;
+        public CatalogController(FlixGoDbContext db, FlixGoDbContext _context)
+        {
+            this.db = db;
+            this._context = _context;
+        }
         public IActionResult Grid()
         {
             return View();
         }
         public IActionResult List()
         {
+       
+
             return View();
+            
         }
-        public IActionResult Movie()
+        [HttpGet]
+        public IActionResult Details()
         {
             return View();
         }

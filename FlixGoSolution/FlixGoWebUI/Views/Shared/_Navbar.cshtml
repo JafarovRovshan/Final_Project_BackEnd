@@ -1,26 +1,37 @@
 ﻿                            <!-- header nav -->
 <ul class="header__nav">
     <!-- dropdown -->
-    <li class="header__nav-item">
-        <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+    <!--<li class="header__nav-item">
+        <a class="dropdown-toggle header__nav-link" asp-controller="home" asp-action="index" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Movies</a>
 
-        <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuHome">
-            <li><a asp-controller="home" asp-action="index">Home slideshow bg</a></li>
-            <li><a asp-controller="home" asp-action="index2">Home static bg</a></li>
-        </ul>
+        <
+        <!--ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuHome">
+           <li><a asp-controller="home" asp-action="index">Films</a></li>-->
+    -->
+    <!--@*<li><a asp-controller="home" asp-action="index2">Home static bg</a></li>*@-->
+    <!--</ul>-->
+    <!--</li>-->
+    <li class="header__nav-item">
+        <a asp-controller="home" asp-action="index" class="header__nav-link">Home</a>
+    </li>
+    <li class="header__nav-item">
+        <a asp-controller="catalog" asp-action="grid" class="header__nav-link">Movies</a>
+    </li>
+    <li class="header__nav-item">
+        <a asp-controller="catalog" asp-action="grid" class="header__nav-link">Series</a>
     </li>
     <!-- end dropdown -->
     <!-- dropdown -->
-    <li class="header__nav-item">
-        <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalog</a>
+    @*<li class="header__nav-item">
+        <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Series</a>
 
         <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
             <li><a asp-controller="catalog" asp-action="grid">Catalog Grid</a></li>
             <li><a asp-controller="catalog" asp-action="list">Catalog List</a></li>
-            <li><a asp-controller="catalog" asp-action="movie">Details Movie</a></li>
+            <li><a asp-controller="catalog" asp-action="details">Details Movie</a></li>
             <li><a asp-controller="catalog" asp-action="tv">Details TV Series</a></li>
         </ul>
-    </li>
+    </li>*@
     <!-- end dropdown -->
 
     <li class="header__nav-item">

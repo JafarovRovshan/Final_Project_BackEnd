@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 
 namespace FlixGoWebUI.Models.Entity
 {
-    public class Category: BaseEntity
+    public class Category:BaseEntity
     {
         public string Name { get; set; }
+        public virtual ICollection<Product>Products{ get; set; }
     }
 }

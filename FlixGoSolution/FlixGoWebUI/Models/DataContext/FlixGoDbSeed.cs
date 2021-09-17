@@ -1,7 +1,10 @@
-﻿using FlixGoWebUI.Models.Entity;
+﻿
+using FlixGoWebUI.Models.Entity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace FlixGoWebUI.Models.DataContext
@@ -15,126 +18,211 @@ namespace FlixGoWebUI.Models.DataContext
                 var db = scope.ServiceProvider.GetRequiredService<FlixGoDbContext>();
 
                 db.Database.Migrate();
-
                 InitCategory(db);
-                InitCountry(db);
                 InitGenre(db);
+                InitCountry(db);
+                InitQuality(db);
+                InitReleaseYear(db);
                 InitProduct(db);
+                InitProductGenre(db);
+                InitProductQuality(db);
+                InitProductReleaseYear(db);
+
             }
 
             return app;
         }
 
+        private static void InitProductReleaseYear(FlixGoDbContext db)
+        {
+            if (!db.ProductReleaseYears.Any())
+            {
+                db.ProductReleaseYears.Add(new ProductReleaseYear
+                {
+                    ReleaseYearId = 2,
+                    ProductId = 3
+                });
+                db.SaveChanges();
+            }
+        }
+
+        private static void InitProductQuality(FlixGoDbContext db)
+        {
+            if (!db.ProductQualities.Any())
+            {
+                db.ProductQualities.Add(new ProductQuality
+                {
+                    QualityId = 1,
+                    ProductId = 2
+                });
+                db.SaveChanges();
+            }
+        }
+
+        //test eliyirik sencani ishle))
+        private static void InitProductGenre(FlixGoDbContext db)
+        {
+            if (!db.ProductGenres.Any())
+            {
+                db.ProductGenres.Add(new ProductGenre
+                {
+                    GenreId=1,
+                    ProductId=1
+                });
+                db.SaveChanges();
+            }
+        }
+
         private static void InitProduct(FlixGoDbContext db)
         {
-
             if (!db.Products.Any())
             {
-
                 var category = db.Categories.FirstOrDefault();
-                var genre = db.Genres.FirstOrDefault();
                 var country = db.Countries.FirstOrDefault();
-                if (category != null && genre != null)
-                {
+                var genre = db.Genres.FirstOrDefault();
+                var quality = db.Qualities.FirstOrDefault();
+                var releaseYear = db.ReleaseYears.FirstOrDefault();
 
+                if (category!=null && country!=null && genre!=null && quality!=null &&releaseYear!=null)
+                {
                     Product product = new Product
                     {
-                        Name = "Joker",
-                        Genre = genre,
-                        Country = country,
-                        Description = "Set in 1981, it follows Arthur Fleck, a failed clown and stand-up comedian whose descent into insanity and nihilism inspires a violent counter-cultural revolution against the wealthy in a decaying Gotham City.",
-                        Duration = 122,
-                        ReleaseDate = 2019,
-                        Category = category,
-                        ImagePath = "cover1.jpg"
+                        Name= "Benched",
+                        Category=category,
+                        Description= "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters",
+                        Country=country,
+                        Genre=genre,
+                        Quality=quality,
+                        ReleaseYear=releaseYear
+
+
                     };
 
+                    product.Images = new List<ProductImage>();
+                    product.Images.Add(new ProductImage
+                    {
+                        ImagePath="cover1.jpg",
+                        IsMain=true
+                    });
+                    product.Images.Add(new ProductImage
+                    {
+                        ImagePath = "project-1.jpg",
+                        IsMain = false
+                    });
+                    product.Images.Add(new ProductImage
+                    {
+                        ImagePath = "project-2.jpg",
+                        IsMain = false
+                    });
+
+                    //2-ci mehsul
                     Product product2 = new Product
                     {
                         Name = "Lucy",
-                        Genre = genre,
-                        Country = country,
-                        Description = "Lucy is a smart, college student who finds herself in a horrific drug and human trafficking situation where her brain is permanently altered by an illegal new drug that gets accidentally ingested during her captivity.",
-                        Duration = 90,
-                        ReleaseDate = 2014,
                         Category = category,
-                        ImagePath = "cover2.jpg"
+                        Description = "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, ",
+                        Country = country,
+                        Genre = genre,
+                        Quality = quality,
+                        ReleaseYear = releaseYear
+
+
                     };
+
+                    product2.Images = new List<ProductImage>();
+                    product2.Images.Add(new ProductImage
+                    {
+                        ImagePath = "cover2.jpg",
+                        IsMain = true
+                    });
+                    product2.Images.Add(new ProductImage
+                    {
+                        ImagePath = "project-3.jpg",
+                        IsMain = false
+                    });
+                    product2.Images.Add(new ProductImage
+                    {
+                        ImagePath = "project-4.jpg",
+                        IsMain = false
+                    });
+
+                    //3-cu mehsul
                     Product product3 = new Product
                     {
-                        Name = "13 Hours: The Secret Soldiers of Benghazi",
-                        Genre = genre,
-                        Country = country,
-                        Description = "The film follows six members of Annex Security Team who fought to defend the American diplomatic compound in Benghazi, Libya after waves of attacks by militants on September 11, 2012. ... Known colloquially as 'the Benghazi movie', the film was released on January 15, 2016, by Paramount Pictures.",
-                        Duration = 144,
-                        ReleaseDate = 2016,
+                        Name = "Infinite",
                         Category = category,
-                        ImagePath = "cover3.jpg"
+                        Description = "Evan Michaels suffers from an unusual ailment: he remembers in detail everything that happened",
+                        Country = country,
+                        Genre = genre,
+                        Quality = quality,
+                        ReleaseYear = releaseYear
+
                     };
 
-                    Product product4 = new Product
+                    product3.Images = new List<ProductImage>();
+                    product3.Images.Add(new ProductImage
                     {
-                        Name = "Avengers: Infinity War",
-                        Genre = genre,
-                        Country = country,
-                        Description = "Avengers: Infinity War is a 2018 American superhero film based on the Marvel Comics superhero team the Avengers. ... In the film, the Avengers and the Guardians of the Galaxy attempt to prevent Thanos from collecting the six all-powerful Infinity Stones as part of his quest to kill half of all life in the universe.",
-                        Duration = 149,
-                        ReleaseDate = 2018,
-                        Category = category,
-                        ImagePath = "cover4.jpg"
-                    };
-                    Product product5 = new Product
+                        ImagePath = "cover3.jpg",
+                        IsMain = true
+                    });
+                    product3.Images.Add(new ProductImage
                     {
-                        Name = "We're the Millers",
-                        Genre = genre,
-                        Country = country,
-                        Description = "The plot follows a small-time pot dealer (Sudeikis) who convinces his neighbors to help him by pretending to be his family, in order to smuggle drugs from Mexico into the United States. The film was released on August 7, 2013, by New Line Cinema through Warner Bros. Pictures.",
-                        Duration = 118,
-                        ReleaseDate = 2013,
-                        Category = category,
-                        ImagePath = "cover5.jpg"
-                    };
-
-                    Product product6 = new Product
+                        ImagePath = "project-5.jpg",
+                        IsMain = false
+                    });
+                    product3.Images.Add(new ProductImage
                     {
-                        Name = "Coffee & Kareem",
-                        Genre = genre,
-                        Country = country,
-                        Description = "It stars Ed Helms, Terrence Little Gardenhigh, Betty Gilpin, RonReaco Lee, Andrew Bachelor, David Alan Grier and Taraji P. Henson, and follows a bumbling Detroit cop who must rescue his girlfriend and her 12-year-old son from gangsters after the boy witnesses a murder.",
-                        Duration = 88,
-                        ReleaseDate = 2020,
-                        Category = category,
-                        ImagePath = "cover6.jpg"
-                    };
+                        ImagePath = "project-6.jpg",
+                        IsMain = false
+                    });
 
                     db.Products.Add(product);
                     db.Products.Add(product2);
                     db.Products.Add(product3);
-                    db.Products.Add(product4);
-                    db.Products.Add(product5);
-                    db.Products.Add(product6);
-
+                   
                     db.SaveChanges();
                 }
 
+
+               
             }
         }
 
-        private static void InitGenre(FlixGoDbContext db)
+        private static void InitReleaseYear(FlixGoDbContext db)
         {
-            if (!db.Genres.Any())
+            if (!db.ReleaseYears.Any())
             {
-                db.Genres.Add(new Genre
+                db.ReleaseYears.Add(new ReleaseYear
                 {
-                    Name = "Comedy"
+                    Year = 2000
                 });
-                db.Genres.Add(new Genre
+                db.ReleaseYears.Add(new ReleaseYear
                 {
-                    Name = "Drama"
+                    Year = 2005
                 });
-                db.Genres.Add(new Genre
+                db.ReleaseYears.Add(new ReleaseYear
                 {
-                    Name = "Horror"
+                    Year = 2010
+                });
+                db.SaveChanges();
+            }
+        }
+
+        private static void InitQuality(FlixGoDbContext db)
+        {
+            if (!db.Qualities.Any())
+            {
+                db.Qualities.Add(new Quality
+                {
+                    Name = "HD 1080"
+                });
+                db.Qualities.Add(new Quality
+                {
+                    Name = "HD 720"
+                });
+                db.Qualities.Add(new Quality
+                {
+                    Name = "DVD"
                 });
                 db.SaveChanges();
             }
@@ -154,7 +242,27 @@ namespace FlixGoWebUI.Models.DataContext
                 });
                 db.Countries.Add(new Country
                 {
-                    Name = "Russian"
+                    Name = "Spain"
+                });
+                db.SaveChanges();
+            }
+        }
+
+        private static void InitGenre(FlixGoDbContext db)
+        {
+            if (!db.Genres.Any())
+            {
+                db.Genres.Add(new Genre
+                {
+                    Name = "Action/Adventure"
+                });
+                db.Genres.Add(new Genre
+                {
+                    Name = "Animals"
+                });
+                db.Genres.Add(new Genre
+                {
+                    Name = "Animation"
                 });
                 db.SaveChanges();
             }
@@ -166,21 +274,18 @@ namespace FlixGoWebUI.Models.DataContext
             {
                 db.Categories.Add(new Category
                 {
-                    Name = "Tv Series"
+                    Name="Serial"
                 });
                 db.Categories.Add(new Category
                 {
-                    Name = "Movies"
+                    Name = "Film"
                 });
                 db.Categories.Add(new Category
                 {
-                    Name = "Cartoons"
+                    Name = "Cizgi Film"
                 });
-
-
                 db.SaveChanges();
             }
         }
-
     }
 }

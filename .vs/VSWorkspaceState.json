@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\FlixGoSolution",
+    "\\FlixGoSolution\\FlixGoWebUI",
+    "\\FlixGoSolution\\FlixGoWebUI\\Properties",
+    "\\FlixGoSolution\\FlixGoWebUI\\Views",
+    "\\FlixGoSolution\\FlixGoWebUI\\Views\\Catalog",
+    "\\FlixGoSolution\\FlixGoWebUI\\Views\\Shared"
   ],
-  "SelectedNode": "\\FlixGoSolution.sln",
+  "SelectedNode": "\\FlixGoSolution\\FlixGoWebUI\\Views\\Shared\\_Navbar.cshtml",
   "PreviewInSolutionExplorer": false
 }
